@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.owl-ontologies.com/VolumeOntology.owl#"
+     xml:base="http://www.owl-ontologies.com/VolumeOntology.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vol="http://www.owl-ontologies.com/VolumeOntology.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/VolumeOntology.owl"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="#ShapeTopic"/>
+    <owl:Class rdf:about="#Concept"/>
+    <owl:Class rdf:about="#Example"/>
+
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="#hasConcept"/>
+    <owl:ObjectProperty rdf:about="#hasExample"/>
+
+    <!-- Data Properties -->
+    <owl:DatatypeProperty rdf:about="#hasAnswer"/>
+
+    <!-- Sphere Volume -->
+    <ShapeTopic rdf:about="#SphereVolume">
+        <hasConcept rdf:resource="#SphereConcept"/>
+    </ShapeTopic>
+
+    <Concept rdf:about="#SphereConcept">
+        <rdfs:label>Volume of a Sphere</rdfs:label>
+        <hasExample rdf:resource="#SphereExample"/>
+    </Concept>
+
+    <Example rdf:about="#SphereExample">
+        <rdfs:label>Calculate the volume of a sphere with radius 5 units</rdfs:label>
+        <hasAnswer>523.6 cubic units</hasAnswer>
+    </Example>
+
+    <!-- Cube Volume -->
+    <ShapeTopic rdf:about="#CubeVolume">
+        <hasConcept rdf:resource="#CubeConcept"/>
+    </ShapeTopic>
+
+    <Concept rdf:about="#CubeConcept">
+        <rdfs:label>Volume of a Cube</rdfs:label>
+        <hasExample rdf:resource="#CubeExample"/>
+    </Concept>
+
+    <Example rdf:about="#CubeExample">
+        <rdfs:label>Calculate the volume of a cube with side length 6 units</rdfs:label>
+        <hasAnswer>216 cubic units</hasAnswer>
+    </Example>
+
+    <!-- Cylinder Volume -->
+    <ShapeTopic rdf:about="#CylinderVolume">
+        <hasConcept rdf:resource="#CylinderConcept"/>
+    </ShapeTopic>
+
+    <Concept rdf:about="#CylinderConcept">
+        <rdfs:label>Volume of a Cylinder</rdfs:label>
+        <hasExample rdf:resource="#CylinderExample"/>
+    </Concept>
+
+    <Example rdf:about="#CylinderExample">
+        <rdfs:label>Calculate the volume of a cylinder with radius 4 units and height 10 units</rdfs:label>
+        <hasAnswer>502.4 cubic units</hasAnswer>
+    </Example>
+
+</rdf:RDF>
